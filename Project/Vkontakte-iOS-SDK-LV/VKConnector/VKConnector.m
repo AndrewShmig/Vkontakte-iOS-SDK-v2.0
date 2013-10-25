@@ -33,6 +33,7 @@
 #import "VKModal.h"
 #import "VKStorage.h"
 #import "VKStorageItem.h"
+#import "UIApplication+NWActivityIndicator.h"
 
 
 #define MARGIN_WIDTH 25.0 // ширина отступа от границ экрана
@@ -194,16 +195,22 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [[UIApplication sharedApplication] networkActivityIndicator:NO];
+
     [_activityIndicator stopAnimating];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
+    [[UIApplication sharedApplication] networkActivityIndicator:YES];
+
     [_activityIndicator startAnimating];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    [[UIApplication sharedApplication] networkActivityIndicator:NO];
+
     if([self.delegate respondsToSelector:@selector(VKConnector:connectionErrorOccured:)]){
         [self.delegate VKConnector:self
             connectionErrorOccured:error];
