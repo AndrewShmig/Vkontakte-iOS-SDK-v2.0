@@ -65,6 +65,7 @@
 		1A9A0F8E7A182E4671269F13 /* VKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A0A89F1869B86FF4640F2 /* VKRequestManager.m */; };
 		1A9A0FE389977F4F8BD62717 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9A0B261588ADDCB3B78A56 /* CoreGraphics.framework */; };
 		1A9A0FF6FB10E7C7732A4196 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A09A82B1F7ED280ED56BA /* LICENSE.txt */; };
+		A516178F77851D5156245034 /* UIApplication+NWActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A514CB77A31B54FE8A9A0E01 /* UIApplication+NWActivityIndicator.m */; };
 		D5F19C61177EDF8E005C49F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52DDC8E177EDDAF00E05B30 /* SenTestingKit.framework */; };
 		D5F19C62177EDF8E005C49F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9A0D576F77FB86579EDC64 /* UIKit.framework */; };
 		D5F19C63177EDF8E005C49F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9A096027F402AF6A3D38C1 /* Foundation.framework */; };
@@ -125,6 +126,8 @@
 		1A9A0F527EF608191560F646 /* ASAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAViewController.h; sourceTree = "<group>"; };
 		1A9A0F7A97BF3D11E889C3DC /* VKStorageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKStorageItem.m; sourceTree = "<group>"; };
 		1A9A0FF8478F9EEE6C08F710 /* VKModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKModal.m; sourceTree = "<group>"; };
+		A512823873BF4631AEC5851F /* UIApplication+NWActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NWActivityIndicator.h"; sourceTree = "<group>"; };
+		A514CB77A31B54FE8A9A0E01 /* UIApplication+NWActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NWActivityIndicator.m"; sourceTree = "<group>"; };
 		D52DDC8E177EDDAF00E05B30 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D574AC57177DF1DF00DC36F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5F19C60177EDF8E005C49F7 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +204,8 @@
 				1A9A08C6674E668EA921920B /* NSString+toBase64.m */,
 				1A9A0DA78A7451CE7554E866 /* NSString+encodeURL.h */,
 				1A9A0631C2C277B785FE893F /* NSString+encodeURL.m */,
+				A514CB77A31B54FE8A9A0E01 /* UIApplication+NWActivityIndicator.m */,
+				A512823873BF4631AEC5851F /* UIApplication+NWActivityIndicator.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				1A9A057EACA72C736359407B /* VKRequest.m in Sources */,
 				1A9A055FF38F6CE3B7986150 /* VKConnector.m in Sources */,
 				1A9A0141877511985424A31F /* VKRequestManager.m in Sources */,
+				A516178F77851D5156245034 /* UIApplication+NWActivityIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

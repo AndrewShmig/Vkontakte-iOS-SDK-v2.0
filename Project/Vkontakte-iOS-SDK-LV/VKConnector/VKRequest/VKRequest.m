@@ -30,6 +30,7 @@
 #import "VKStorage.h"
 #import "VKStorageItem.h"
 #import "VKAccessToken.h"
+#import "UIApplication+NWActivityIndicator.h"
 
 
 #define INFO_LOG() NSLog(@"%s", __FUNCTION__)
@@ -224,11 +225,15 @@
                                     initWithRequest:_request
                                            delegate:self
                                    startImmediately:YES];
+
+    [[UIApplication sharedApplication] networkActivityIndicator:YES];
 }
 
 - (void)cancel
 {
     INFO_LOG();
+
+    [[UIApplication sharedApplication] networkActivityIndicator:NO];
 
     _receivedData = nil;
     _expectedDataSize = NSURLResponseUnknownContentLength;
@@ -375,6 +380,8 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
     INFO_LOG();
 
+    [[UIApplication sharedApplication] networkActivityIndicator:NO];
+
 //    обработка полного ответа сервера
     NSJSONReadingOptions mask = NSJSONReadingAllowFragments |
             NSJSONReadingMutableContainers |
@@ -448,6 +455,8 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
   didFailWithError:(NSError *)error
 {
     INFO_LOG();
+
+    [[UIApplication sharedApplication] networkActivityIndicator:NO];
 
     if (nil != self.delegate && [self.delegate respondsToSelector:@selector(VKRequest:connectionErrorOccured:)]) {
         [self.delegate VKRequest:self
