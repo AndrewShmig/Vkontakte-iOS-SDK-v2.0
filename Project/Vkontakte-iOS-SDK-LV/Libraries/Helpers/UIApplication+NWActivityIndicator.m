@@ -1,8 +1,6 @@
 //
 //  UIApplication+NWActivityIndicator.m
 //
-//  Created by Hituzi Ando on 13/01/07.
-//
 
 #import "UIApplication+NWActivityIndicator.h"
 
