@@ -353,6 +353,13 @@
                                selector:_cmd];
 }
 
+- (VKRequest *)friendsGetSuggestions:(NSDictionary *)options
+{
+    return [self configureRequestMethod:kVKFriendsGetSuggestions
+                                options:options
+                               selector:_cmd
+                         addAccessToken:YES];
+}
 
 - (VKRequest *)friendsAreFriends:(NSDictionary *)options
 {
