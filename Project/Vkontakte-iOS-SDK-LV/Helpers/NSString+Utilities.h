@@ -40,4 +40,6 @@
 
 - (BOOL)isEmpty;
 
+- (NSUInteger)unsignedIntValue;
+
 @end
