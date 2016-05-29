@@ -124,6 +124,18 @@
     return (0 == [filtered length]);
 }
 
+- (NSUInteger)unsignedIntValue {
+    static NSNumberFormatter *formatter = nil;
+    if (!formatter) {
+        formatter = [[NSNumberFormatter alloc] init];
+        formatter.formatterBehavior = NSNumberFormatterBehavior10_4;
+        formatter.groupingSeparator = @"";
+    }
+    NSNumber *unsignedInt = [formatter numberFromString:self];
+    if (!unsignedInt) return 0;
+    return unsignedInt.unsignedIntValue;
+}
+
 #pragma mark - Methods for internal usage
 
 - (BOOL)possibleToCompareStrings:(NSString *)string
@@ -135,6 +147,7 @@
 
     return ok;
 }
+
 
 
 @end
