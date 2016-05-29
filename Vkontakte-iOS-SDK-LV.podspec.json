@@ -1,6 +1,6 @@
 {
   "name": "Vkontakte-iOS-SDK-LV",
-  "version": "4.7.15",
+  "version": "4.7.14",
   "summary": "Powerful & flexible Vkontakte iOS SDK, fork from https://github.com/AndrewShmig/Vkontakte-iOS-SDK-LV.git with one bug fixed",
   "homepage": "https://github.com/userow/Vkontakte-iOS-SDK-LV",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/userow/Vkontakte-iOS-SDK-LV.git",
-    "tag": "v4.7.15"
+    "tag": "v4.7.14"
   },
   "source_files": "Project/Vkontakte-iOS-SDK-LV/**/*.{h,m}",
   "requires_arc": true,
